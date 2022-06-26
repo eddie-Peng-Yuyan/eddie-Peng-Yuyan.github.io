@@ -1,7 +1,7 @@
 ---
 home: true
 heroText: 难顶啊马飞，真的不容易啊。不过做出来还是挺有成就感的。
-tagline: A simple and beautiful vuepress blog theme.
+tagline: 起飞了大古.
 # heroImage: /hero.png
 # heroImageStyle: {
 #   maxWidth: '600px',
