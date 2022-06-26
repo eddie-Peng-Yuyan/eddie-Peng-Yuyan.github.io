@@ -1,0 +1,15 @@
+{
+  "name": "好记性不如烂笔头",
+  "version": "1.0.0",
+  "author": "reco_luan",
+  "scripts": {
+    "dev": "vuepress dev . --open --host \"localhost\"",
+    "build": "vuepress build .",
+    "deploy": "bash deploy.sh"
+  },
+  "devDependencies": {
+    "vuepress": "1.8.2",
+    "vuepress-theme-reco": "1.6.10"
+  },
+  "description": "记录一些容易忘记的东西"
+}
