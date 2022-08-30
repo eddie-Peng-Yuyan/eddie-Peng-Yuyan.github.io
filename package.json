@@ -1,15 +1,20 @@
 {
-  "name": "好记性不如烂笔头",
+  "name": "Eddie",
   "version": "1.0.0",
   "author": "reco_luan",
   "scripts": {
     "dev": "vuepress dev . --open --host \"localhost\"",
-    "build": "vuepress build .",
+    "build": "vuepress build",
     "deploy": "bash deploy.sh"
   },
   "devDependencies": {
+    "node-sass": "5.0",
+    "sass-loader": "^10.0.2",
     "vuepress": "1.8.2",
     "vuepress-theme-reco": "1.6.10"
   },
-  "description": "记录一些容易忘记的东西"
+  "description": "记录一些容易忘记的东西",
+  "dependencies": {
+    "yarn": "^1.22.19"
+  }
 }
