@@ -5,18 +5,18 @@ set -e
 npm run build
 
 # 进入生成的文件夹，这里是默认的路径，能够自定义
-cd ./public
+cd docs/.vuepress/dist
 
 # 若是是发布到自定义域名
 # echo 'www.isunbeam.cn' > CNAME
 
 git init
 git add -A
-git commit -m 'deploy'
+git commit -m 'blogs'
 
 # 若是发布到 https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:<BranchName>
-git push -f https://github.com/eddie-Peng-Yuyan/eddie-Peng-Yuyan.github.io.git master:blogs
+git push -f https://github.com/eddie-Peng-Yuyan/eddie-Peng-Yuyan.github.io.git main:blogs
 
 cd -
 
