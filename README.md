@@ -1,7 +1,12 @@
 ---
 home: true
+<<<<<<< HEAD
 heroText: 记录一些写了又忘记的东西
 tagline: 
+=======
+heroText: 难顶啊马飞，真的不容易啊。不过做出来还是挺有成就感的。
+tagline: A simple and beautiful vuepress blog theme.
+>>>>>>> parent of 01d1b1e (部署完成)
 # heroImage: /hero.png
 # heroImageStyle: {
 #   maxWidth: '600px',
