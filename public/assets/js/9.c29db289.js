@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{370:function(n,t,c){},411:function(n,t,c){"use strict";c(370)},419:function(n,t,c){"use strict";c.r(t);var s={},i=(c(411),c(2)),u=Object(i.a)(s,(function(){return(0,this._self._c)("div",{staticClass:"content"},[this._v("\n  测试vue\n")])}),[],!1,null,"78f92cac",null);t.default=u.exports}}]);
