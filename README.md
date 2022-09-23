@@ -1,6 +1,6 @@
 ---
 home: true
-heroText: 记录一些容易忘记的东西
+heroText: 
 tagline: 
 # heroImage: /hero.png
 # heroImageStyle: {
