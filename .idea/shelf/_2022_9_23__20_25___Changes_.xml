@@ -1,0 +1,29 @@
+<changelist name="在进行更新之前于_2022_9_23,_20_25_取消提交了变更_[Changes]" date="1663935922226" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2022_9_23,_20_25_取消提交了变更_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="在进行更新之前于 2022/9/23, 20:25 取消提交了变更 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="public/assets/fonts/iconfont.ecabaf00.ttf" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="public/favicon.ico" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="public/assets/fonts/iconfont.938fa69e.woff" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="public/logo.png" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="public/avatar.png" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+</changelist>
