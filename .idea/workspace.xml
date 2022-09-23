@@ -84,7 +84,7 @@
       <workItem from="1663768873207" duration="974000" />
       <workItem from="1663769876485" duration="284000" />
       <workItem from="1663935711185" duration="1109000" />
-      <workItem from="1663936826982" duration="300000" />
+      <workItem from="1663936826982" duration="370000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1663936209990</created>
@@ -107,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663936908137</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="更改首页图片">
+      <created>1663937175279</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1663937175279</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
