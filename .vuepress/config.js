@@ -1,6 +1,6 @@
 module.exports = {
   title: '你在教我做事啊',
-  description: '记录一些容易忘记的东西',
+  description: '',
   dest: 'public',
   head: [
     [
