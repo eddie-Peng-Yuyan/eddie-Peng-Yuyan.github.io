@@ -1,5 +1,5 @@
 module.exports = {
-  title: '你在教我做事啊',
+  title: '学会了就是自己的',
   description: '',
   dest: 'public',
   head: [
@@ -22,17 +22,29 @@ module.exports = {
   themeConfig: {
     nav: [
       {
-        text: 'Home',
+        text: '首页',
         link: '/',
         icon: 'reco-home',
       },
       {
-        text: 'TimeLine',
+        text: '笔记',
+        icon: 'reco-date',
+        items:[
+          {
+            text: 'Vue3',
+            link: '/blogs/frontNotes/Vue3/',
+          },{
+            text: 'Ts',
+            link: '/blogs/frontNotes/Ts/',
+          },
+        ]
+      },{
+        text: '时间线',
         link: '/timeline/',
         icon: 'reco-date',
       },
       {
-        text: 'Docs',
+        text: '网站',
         icon: 'reco-message',
         items: [
           {
@@ -41,47 +53,21 @@ module.exports = {
           },
         ],
       },
-      {
-        text: 'Contact',
-        icon: 'reco-message',
-        items: [
-          {
-            text: 'GitHub',
-            link: 'https://github.com/recoluan',
-            icon: 'reco-github',
-          },
-        ],
-      },
     ],
-    sidebar: {
-      '/docs/theme-reco/': ['', 'theme', 'plugin', 'api'],
+    sidebar: { // 侧边栏
+      '/blogs/frontNotes/': ['Vue3', 'Ts'],
     },
     type: 'blog',
-    blogConfig: {
-      category: {
-        location: 2,
-        text: 'Category',
-      },
-      tag: {
-        location: 3,
-        text: 'Tag',
-      },
-    },
-    friendLink: [
-      {
-        title: '午后南杂',
-        desc: 'Enjoy when you can, and endure when you must.',
-        email: '1156743527@qq.com',
-        link: 'https://www.recoluan.com',
-      },
-      {
-        title: 'vuepress-theme-reco',
-        desc: 'A simple and beautiful vuepress Blog & Doc theme.',
-        avatar:
-          'https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png',
-        link: 'https://vuepress-theme-reco.recoluan.com',
-      },
-    ],
+    // blogConfig: {
+    //   category: {
+    //     location: 2,
+    //     text: 'Category',
+    //   },
+    //   tag: {
+    //     location: 3,
+    //     text: 'Tag',
+    //   },
+    // },
     logo: '/logo.png',
     search: true,
     searchMaxSuggestions: 10,
@@ -89,7 +75,7 @@ module.exports = {
     author: 'Eddie',
     authorAvatar: '/avatar.png',
     record: 'xxxx',
-    startYear: '2017',
+    startYear: '2022',
   },
   markdown: {
     lineNumbers: true,
