@@ -342,7 +342,7 @@ sidebar: auto
   })
 </script>
 ```
-### 6.2Provide和inject函数
+### 6.2 Provide和inject函数
 * provide和inject函数是用于祖孙组件之间的通信的，也就是多层嵌套组件。
 * provide函数用于提供数据，inject函数用于接收数据。
 ```js
