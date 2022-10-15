@@ -288,7 +288,61 @@ sidebar: auto
   // errorCaptured  onErrorCaptured
 </scripe>
 ```
-## 6. Provide和inject函数
+## 6. 父子组件通信
+### 6.1 父组件向子组件传递数据
+* 父组件向子组件传递数据，可以通过props属性来实现。
+```js
+// 父组件
+<template>
+  <div>
+    <h2>父组件</h2>
+    <Child ref='childRef' :name="name" :age="age" />
+  </div>
+</template>
+<script setup>
+  import Child from './Child.vue'
+  const name = 'Eddie'
+  const age = 18
+  const childRef = ref(null) // 拿到子组件的ref对象
+  
+  const handleClick = (val) => {
+    name.value = val; // 子组件修改了父组件的数据
+    console.log('子组件调用父组件的handleClick');
+  }
+  const handleClick2 = () => {
+    childRef.value.handleChildClick(); // 父组件调用子组件的方法 子组件需要先抛出这个方法
+  }
+</script>
+// 子组件
+<template>
+  <div>
+    <h2>子组件</h2>
+    <p>姓名：{{ name }}</p>
+    <p>年龄：{{ age }}</p>
+  </div>
+</template>
+<script setup>
+  import { defineProps,defineEmits,defineExpose } from 'vue'
+  const { name, age } = defineProps({ // 使用defineProps接收父组件传递的数据
+    name: String, // 可以简写为 name: String
+    age: { // 也可以写成对象的形式 设置默认值和是否必填
+      type: Number,
+      default: 18 // 如果类型是对象和数组，需要使用函数返回默认值 default: () => {} 或 default: () => []
+      required: true
+    }
+  })
+  // 子组件调用父组件的方法和传值
+  const emit = defineEmits(['handleClick']) // 传入一个数组，数组中的值为父组件定义的方法名 否则会报警告
+  const handleClick = () => {
+    emit('handleClick', 'Eddie') // 调用父组件的handleClick方法，并传入参数
+  }
+  // 父组件调用子组件的方法
+  defineExpose({ // 需要先抛出不然父组件调用不了
+    handleChildClick: handleClick
+  })
+</script>
+```
+### 6.2Provide和inject函数
 * provide和inject函数是用于祖孙组件之间的通信的，也就是多层嵌套组件。
 * provide函数用于提供数据，inject函数用于接收数据。
 ```js
