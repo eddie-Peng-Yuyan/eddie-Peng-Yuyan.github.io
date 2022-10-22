@@ -342,7 +342,60 @@ sidebar: auto
   })
 </script>
 ```
-### 6.2 Provide和inject函数
+### 6.2 父子组件双向绑定
+* 父子组件双向绑定，可以通过v-model来实现。
+```js
+// 父组件 
+<template>
+  <div>
+    <h2>父组件</h2>
+    <Child ref='childRef' v-model="arr" />
+  </div>
+</template>
+<script setup>
+  import {reactive} from 'vue'
+  import Child from './Child.vue'
+  const arr = reactive([
+  {
+    value:'',
+    placeholder:'请输入姓名'   
+  },
+  {
+    value:'',
+    placeholder:'父子组件双向绑定'
+  }
+  ])
+</script>
+// 子组件
+<template>
+  <div>
+    <h2>子组件</h2>
+    <input v-for='(item,i) in formData' :key='i' type="text" v-model="item.value"
+    :placeholder='item.placeholder />
+  </div>
+</template>
+<script setup>
+  import { defineProps,defineEmits,defineExpose } from 'vue'
+  const inputArr = defineProps({
+    modelValue: Array, // modelValue是固定的 也可以改成其他的 父组件这样传 v-model.eddie
+    required: true
+  })
+  const formData = ref({ ...inputArr.modelValue }) // 通过解构赋值拿到父组件传递的数据
+  const emit = defineEmits(['update:modelValue']) // 传入一个数组，数组中的值为父组件定义的方法名 否则会报警告
+  
+  watch( // 通过这种方法才不会违背单向数据流 才是真正的实现双向数据绑定
+  formData,
+  (newValue) => {
+  emit('update:modelValue', newValue)
+  },
+  {
+    deep: true
+  }
+  )
+</script>
+```
+
+### 6.3 Provide和inject函数
 * provide和inject函数是用于祖孙组件之间的通信的，也就是多层嵌套组件。
 * provide函数用于提供数据，inject函数用于接收数据。
 ```js
