@@ -37,6 +37,10 @@ module.exports = {
             text: 'Ts',
             link: '/blogs/frontNotes/Ts/',
           },
+          {
+            text: 'Node',
+            link: '/blogs/frontNotes/Node/',
+          },
         ]
       },{
         text: '时间线',
@@ -55,7 +59,7 @@ module.exports = {
       },
     ],
     sidebar: { // 侧边栏
-      '/blogs/frontNotes/': ['Vue3', 'Ts'],
+      '/blogs/frontNotes/': ['Vue3', 'Ts','Node'],
     },
     type: 'blog',
     // blogConfig: {
