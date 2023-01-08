@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{525:function(t,s,i){"use strict";i.r(s);var e={props:{msg:String},name:"webSite"},n=i(17),a=Object(n.a)(e,(function(){var t=this.$createElement,s=this._self._c||t;return s("div",[s("div",[this._v("芜湖")]),this._v(" "),s("div",[this._v(this._s(this.msg))])])}),[],!1,null,"19adea94",null);s.default=a.exports}}]);
