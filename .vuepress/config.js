@@ -84,4 +84,9 @@ module.exports = {
   markdown: {
     lineNumbers: true,
   },
+  configureWebpack:{
+    node:{
+      global:true
+    }
+  }
 }
