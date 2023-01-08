@@ -262,4 +262,69 @@ console.log('script end')
 // promise2
 // setToueout
 ```
+## 6. Node的事件循环
+* Node的事件循环是基于libuv库的
+* Node的事件循环分为6个阶段
+  * timers: 执行setTimeout和setInterval的回调
+  * pending callbacks: 执行系统级别的回调，如TCP错误
+  * idle, prepare: 仅系统内部使用
+  * poll: 获取新的I/O事件，适当的条件下node将阻塞在这里
+  * check: 执行setImmediate的回调
+  * close callbacks: 执行socket的close事件的回调
+  * 事件循环的顺序是 mainScript-> nextTicks -> other microtask(微任务) -> timers(定时器) -> Poll(轮询：检索新的I/O事件)(面试题不会出) -> check(setImmediate) ->close callbacks(关闭回调)
 
+### 6.1 Node的事件循环面试题一
+```js
+async function async1() {
+  console.log('async1 start')
+  await async2()
+  console.log('async1 end')
+}
+
+async function async2() {
+  console.log('async2')
+}
+
+console.log('script start')
+
+setTimeout(function () {
+  console.log('setTimeout0')
+}, 0)
+
+setTimeout(function () {
+  console.log('setTimeout2')
+}, 300)
+
+setImmediate(() => console.log('setImmediate'));
+
+process.nextTick(() => console.log('nextTick1'));
+
+async1();
+
+process.nextTick(() => console.log('nextTick2'));
+
+new Promise(function (resolve) {
+  console.log('promise1')
+  resolve();
+  console.log('promise2')
+}).then(function () {
+  console.log('promise3')
+})
+
+console.log('script end')
+
+
+// script start
+// async1 start
+// async2
+// promise1
+// promise2
+// script end
+// nextTick1
+// nextTick2
+// async1 end
+//  promise3
+// setTimeout0
+// setImmediate
+// setTimeout2
+```
