@@ -11,5 +11,8 @@
     "vuepress": "1.8.2",
     "vuepress-theme-reco": "1.6.10"
   },
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "axios": "^1.2.2"
+  }
 }
